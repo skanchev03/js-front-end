@@ -1,0 +1,26 @@
+function validityChecker(x1, y1, x2, y2) {
+
+    function isValid(xA, yA, xB, yB) {
+        return Number.isInteger(
+            Math.sqrt((xA - xB) ** 2 + (yA - yB) ** 2)
+        );
+    }
+
+    if (isValid(x1, y1, 0, 0)) {
+        console.log(`{${x1}, ${y1}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {0, 0} is invalid`);
+    }
+
+    if (isValid(x2, y2, 0, 0)) {
+        console.log(`{${x2}, ${y2}} to {0, 0} is valid`);
+    } else {
+        console.log(`{${x2}, ${y2}} to {0, 0} is invalid`);
+    }
+
+    if (isValid(x1, y1, x2, y2)) {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is valid`);
+    } else {
+        console.log(`{${x1}, ${y1}} to {${x2}, ${y2}} is invalid`);
+    }
+}
